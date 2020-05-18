@@ -11,39 +11,44 @@ const Main = () => {
   const [image, setImage] = useState(img[start]);
 
   const ButtonClick = (param) => {
+    let accumulateStartPlus = start + 1;
+    let accumulateStartMinus = start - 1;
+
     if (param === previous) {
-      setStart(start - 1);
-      setImage(img[start]);
-      if (start === 0) {
-        setStart(4);
+      setStart(accumulateStartMinus);
+      setImage(img[accumulateStartMinus]);
+      console.log(accumulateStartMinus);
+
+      if (accumulateStartMinus === -1) {
+        accumulateStartMinus = 4;
+        setStart(accumulateStartMinus);
+        setImage(img[accumulateStartMinus]);
+        console.log(accumulateStartMinus);
       }
     }
     if (param === next) {
-      setStart(start + 1);
-      setImage(img[start]);
-      if (start === 4) {
-        setStart(0);
+      setStart(accumulateStartPlus);
+      setImage(img[accumulateStartPlus]);
+      console.log(accumulateStartPlus);
+
+      if (accumulateStartPlus === 4) {
+        setStart(-1);
+        console.log(accumulateStartPlus);
       }
     }
   };
 
   return (
     <div className="content">
-      <div>
-        <button
-          className="button-previous"
-          onClick={() => ButtonClick(previous)}
-        ></button>
-      </div>
-      <div>
-        <img src={image} alt="" />
-      </div>
-      <div>
-        <button
-          className="button-next"
-          onClick={() => ButtonClick(next)}
-        ></button>
-      </div>
+      <button
+        className="button-previous"
+        onClick={() => ButtonClick(previous)}
+      ></button>
+      <img src={image} alt="jojo" />
+      <button
+        className="button-next"
+        onClick={() => ButtonClick(next)}
+      ></button>
     </div>
   );
 };
