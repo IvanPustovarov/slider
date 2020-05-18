@@ -1,0 +1,15 @@
+.content {
+  font-size: 25px;
+}
+.button-next {
+  border-radius: 50%;
+  background: url(/images/arrow-left.png);
+  width: 130px;
+  height: 100px;
+}
+.button-previous {
+  border-radius: 50%;
+  background: url(/images/arrow-right.png);
+  width: 130px;
+  height: 100px;
+}
