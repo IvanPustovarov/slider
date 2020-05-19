@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import Slider from "./components/Slider";
 import * as serviceWorker from "./serviceWorker";
 
@@ -15,7 +14,6 @@ const images = [
 ReactDOM.render(
   <React.StrictMode>
     <Slider slides={images} />
-    {/* <App /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
