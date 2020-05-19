@@ -1,8 +1,5 @@
 /** @jsx jsx */
-import React from "react";
 import { css, jsx } from "@emotion/core";
-// import leftArrow from "./img/left-arrow.svg";
-// import rightArrow from "../../img/left-arrow.svg";
 
 const Arrow = ({ direction, handleClick }) => (
   <div
@@ -30,13 +27,7 @@ const Arrow = ({ direction, handleClick }) => (
         }
       }
     `}
-  >
-    {/* {direction === "right" ? (
-      <img src={rightArrow} alt="" />
-    ) : (
-      <img src={leftArrow} alt="" />
-    )} */}
-  </div>
+  ></div>
 );
 
 export default Arrow;
